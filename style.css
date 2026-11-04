@@ -120,4 +120,24 @@ body {
   border: 3px solid #f5b301;
 }
 
+footer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+  color: #f3f4f6;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+  }
+  .menu a {
+    margin: 10px 5px 0;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
