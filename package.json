@@ -1,0 +1,10 @@
+{
+  "name": "loja-fivem",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch style.scss style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}
