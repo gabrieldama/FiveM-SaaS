@@ -1,0 +1,20 @@
+@use "variaveis" as *;
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    @if $tema == escuro {
+        background-color: $cor-fundo;
+        color: $cor-texto;
+    } @else {
+        background-color: white;
+        color: #333;
+    }
+}
+
+.container {
+    max-width: $largura-container;
+    margin: 0 auto;
+    padding: $espacamento;
+}

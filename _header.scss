@@ -1,0 +1,43 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $espacamento;
+    background-color: #000;
+
+    .logo {
+        margin: 0;
+        color: $cor-texto;
+
+        span {
+            color: $cor-primaria;
+        }
+    }
+
+    a {
+        color: $cor-texto;
+        text-decoration: none;
+        margin-left: $espacamento;
+
+        &:hover {
+            color: $cor-primaria;
+        }
+    }
+}
+
+.banner {
+    @include centralizar;
+    padding: $espacamento * 4 $espacamento;
+    background-color: $cor-card;
+
+    h1 {
+        color: $cor-primaria;
+    }
+
+    .botao-principal {
+        @include botao(#000, $cor-primaria);
+    }
+}
