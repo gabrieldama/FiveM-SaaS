@@ -1,0 +1,56 @@
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.caixa {
+    padding: $espacamento;
+    border-radius: $borda;
+}
+
+.titulo-secao {
+    color: $cor-primaria;
+    border-bottom: 2px solid $cor-primaria;
+    padding-bottom: 5px;
+}
+
+.cards {
+    display: flex;
+    gap: $espacamento;
+    margin-bottom: $espacamento * 2;
+}
+
+.card {
+    @extend .caixa;
+    flex: 1;
+    background-color: $cor-card;
+
+    h3 {
+        color: $cor-primaria;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .preco {
+        display: block;
+        margin-bottom: $espacamento;
+        font-size: 20px;
+        font-weight: bold;
+        color: $cor-secundaria;
+    }
+
+    .botao-comprar {
+        @include botao(white, $cor-secundaria);
+    }
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+// Planos VIP: a borda fica mais grossa a cada plano
+@for $i from 1 through 3 {
+    .plano-#{$i} {
+        border: 1px * $i solid $cor-primaria;
+    }
+}
