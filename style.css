@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #111827;
-  color: #f3f4f6;
+  background-color: #0b1026;
+  color: #e0f2fe;
 }
 
 .container {
@@ -16,40 +16,40 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #000;
+  background-color: #060918;
 }
 .menu .logo {
   margin: 0;
-  color: #f3f4f6;
+  color: #e0f2fe;
 }
 .menu .logo span {
-  color: #f5b301;
+  color: #22d3ee;
 }
 .menu a {
-  color: #f3f4f6;
+  color: #e0f2fe;
   text-decoration: none;
   margin-left: 20px;
 }
 .menu a:hover {
-  color: #f5b301;
+  color: #22d3ee;
 }
 
 .banner {
   text-align: center;
   margin: 0 auto;
   padding: 80px 20px;
-  background-color: #1f2937;
+  background-color: #161d45;
 }
 .banner h1 {
-  color: #f5b301;
+  color: #22d3ee;
 }
 .banner .botao-principal {
   display: inline-block;
   padding: 10px 20px;
   border: none;
   border-radius: 8px;
-  color: #000;
-  background-color: #f5b301;
+  color: #0b1026;
+  background-color: #22d3ee;
   text-decoration: none;
   font-weight: bold;
 }
@@ -63,8 +63,8 @@ body {
 }
 
 .titulo-secao {
-  color: #f5b301;
-  border-bottom: 2px solid #f5b301;
+  color: #22d3ee;
+  border-bottom: 2px solid #22d3ee;
   padding-bottom: 5px;
 }
 
@@ -76,10 +76,10 @@ body {
 
 .card {
   flex: 1;
-  background-color: #1f2937;
+  background-color: #161d45;
 }
 .card h3 {
-  color: #f5b301;
+  color: #22d3ee;
 }
 .card p {
   line-height: 1.5;
@@ -89,7 +89,7 @@ body {
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: bold;
-  color: #22c55e;
+  color: #d946ef;
 }
 .card .botao-comprar {
   display: inline-block;
@@ -97,7 +97,7 @@ body {
   border: none;
   border-radius: 8px;
   color: white;
-  background-color: #22c55e;
+  background-color: #d946ef;
   text-decoration: none;
   font-weight: bold;
 }
@@ -109,23 +109,23 @@ body {
 }
 
 .plano-1 {
-  border: 1px solid #f5b301;
+  border: 1px solid #22d3ee;
 }
 
 .plano-2 {
-  border: 2px solid #f5b301;
+  border: 2px solid #22d3ee;
 }
 
 .plano-3 {
-  border: 3px solid #f5b301;
+  border: 3px solid #22d3ee;
 }
 
 footer {
   text-align: center;
   margin: 0 auto;
   padding: 20px;
-  background-color: #000;
-  color: #f3f4f6;
+  background-color: #060918;
+  color: #e0f2fe;
 }
 
 @media (max-width: 600px) {

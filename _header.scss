@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: $espacamento;
-    background-color: #000;
+    background-color: $cor-menu;
 
     .logo {
         margin: 0;
@@ -38,6 +38,6 @@
     }
 
     .botao-principal {
-        @include botao(#000, $cor-primaria);
+        @include botao($cor-fundo, $cor-primaria);
     }
 }

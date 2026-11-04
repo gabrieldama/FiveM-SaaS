@@ -4,7 +4,7 @@
 footer {
     @include centralizar;
     padding: $espacamento;
-    background-color: #000;
+    background-color: $cor-menu;
     color: $cor-texto;
 }
 
