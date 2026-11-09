@@ -1,6 +1,11 @@
-@use "base";
 @use "variaveis" as *;
 @use "mixins" as *;
+
+.caixa {
+    padding: $espacamento;
+    border-radius: $borda;
+    background-color: $cor-card;
+}
 
 .starter-box {
     @extend .caixa;
@@ -13,7 +18,7 @@
         color: $cor-primaria;
     }
 
-    @include celular {
+    @media (max-width: 700px) {
         flex-direction: column;
         align-items: flex-start;
     }
@@ -28,14 +33,13 @@
     display: flex;
     gap: $espacamento;
 
-    @include celular {
+    @media (max-width: 700px) {
         flex-direction: column;
     }
 }
 
 .card {
     @extend .caixa;
-    position: relative;
     flex: 1;
 
     h3 {
@@ -47,21 +51,14 @@
     }
 
     .selo {
-        position: absolute;
-        top: -12px;
-        right: $espacamento;
+        display: inline-block;
         padding: 4px 10px;
         border-radius: $borda;
         font-size: 12px;
         background-color: $cor-secundaria;
     }
-
-    &:hover {
-        transform: scale(1.03);
-    }
 }
 
-// Planos VIP: a borda fica mais grossa a cada plano
 @for $i from 1 through 3 {
     .plano-#{$i} {
         border: 1px * $i solid $cor-primaria;

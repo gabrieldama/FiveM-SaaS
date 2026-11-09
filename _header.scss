@@ -2,8 +2,6 @@
 @use "mixins" as *;
 
 .menu {
-    position: sticky;
-    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,11 +30,11 @@
     }
 
     .botao-login {
-        @include botao($cor-primaria, transparent);
+        @include botao($cor-primaria, $cor-menu);
         border: 2px solid $cor-primaria;
     }
 
-    @include celular {
+    @media (max-width: 700px) {
         flex-direction: column;
         gap: 10px;
 
@@ -58,7 +56,7 @@
 .hero {
     @include centralizar;
     padding: $espacamento * 6 $espacamento;
-    background: linear-gradient(135deg, $cor-menu, $cor-card, $cor-secundaria);
+    background-color: $cor-card;
 
     h1 {
         font-size: 48px;
@@ -72,7 +70,7 @@
         padding: 15px 40px;
     }
 
-    @include celular {
+    @media (max-width: 700px) {
         h1 {
             font-size: 30px;
         }

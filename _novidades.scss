@@ -1,4 +1,3 @@
-@use "base";
 @use "variaveis" as *;
 
 .noticias {
@@ -9,7 +8,6 @@
 }
 
 .noticia {
-    @extend .caixa;
     display: flex;
     align-items: center;
     gap: $espacamento;

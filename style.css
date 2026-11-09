@@ -5,12 +5,6 @@ body {
   color: #e0f2fe;
 }
 
-.caixa, .passo, .noticia, .starter-box, .card {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: #161d45;
-}
-
 .secao {
   max-width: 1000px;
   margin: 0 auto;
@@ -47,15 +41,9 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  cursor: pointer;
-}
-.botao-comprar:hover {
-  opacity: 0.8;
 }
 
 .menu {
-  position: sticky;
-  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -85,16 +73,10 @@ body {
   border: none;
   border-radius: 8px;
   color: #22d3ee;
-  background-color: transparent;
+  background-color: #060918;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  cursor: pointer;
-}
-.menu .botao-login:hover {
-  opacity: 0.8;
-}
-.menu .botao-login {
   border: 2px solid #22d3ee;
 }
 @media (max-width: 700px) {
@@ -119,7 +101,7 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 120px 20px;
-  background: linear-gradient(135deg, #060918, #161d45, #d946ef);
+  background-color: #161d45;
 }
 .hero h1 {
   font-size: 48px;
@@ -136,12 +118,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  cursor: pointer;
-}
-.hero .botao-principal:hover {
-  opacity: 0.8;
-}
-.hero .botao-principal {
   font-size: 18px;
   padding: 15px 40px;
 }
@@ -149,6 +125,12 @@ body {
   .hero h1 {
     font-size: 30px;
   }
+}
+
+.caixa, .card, .starter-box {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #161d45;
 }
 
 .starter-box {
@@ -183,7 +165,6 @@ body {
 }
 
 .card {
-  position: relative;
   flex: 1;
 }
 .card h3 {
@@ -193,16 +174,11 @@ body {
   line-height: 1.5;
 }
 .card .selo {
-  position: absolute;
-  top: -12px;
-  right: 20px;
+  display: inline-block;
   padding: 4px 10px;
   border-radius: 8px;
   font-size: 12px;
   background-color: #d946ef;
-}
-.card:hover {
-  transform: scale(1.03);
 }
 
 .plano-1 {
@@ -269,24 +245,7 @@ body {
   color: #22d3ee;
 }
 
-.passo:nth-child(1)::before {
-  content: "1";
-  display: block;
-  font-size: 40px;
-  font-weight: bold;
-  color: #d946ef;
-}
-
-.passo:nth-child(2)::before {
-  content: "2";
-  display: block;
-  font-size: 40px;
-  font-weight: bold;
-  color: #d946ef;
-}
-
-.passo:nth-child(3)::before {
-  content: "3";
+.passo .numero {
   display: block;
   font-size: 40px;
   font-weight: bold;

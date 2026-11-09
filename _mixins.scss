@@ -11,20 +11,9 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    cursor: pointer;
-
-    &:hover {
-        opacity: 0.8;
-    }
 }
 
 @mixin centralizar {
     text-align: center;
     margin: 0 auto;
-}
-
-@mixin celular {
-    @media (max-width: 700px) {
-        @content;
-    }
 }

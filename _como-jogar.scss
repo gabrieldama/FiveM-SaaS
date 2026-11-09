@@ -1,4 +1,3 @@
-@use "base";
 @use "variaveis" as *;
 @use "mixins" as *;
 
@@ -6,13 +5,12 @@
     display: flex;
     gap: $espacamento;
 
-    @include celular {
+    @media (max-width: 700px) {
         flex-direction: column;
     }
 }
 
 .passo {
-    @extend .caixa;
     flex: 1;
     text-align: center;
 
@@ -21,15 +19,11 @@
     }
 }
 
-// Numera os passos 1, 2 e 3
-@for $i from 1 through 3 {
-    .passo:nth-child(#{$i})::before {
-        content: "#{$i}";
-        display: block;
-        font-size: 40px;
-        font-weight: bold;
-        color: $cor-secundaria;
-    }
+.passo .numero {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    color: $cor-secundaria;
 }
 
 .contato form {
