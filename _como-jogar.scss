@@ -1,0 +1,54 @@
+@use "base";
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.passos {
+    display: flex;
+    gap: $espacamento;
+
+    @include celular {
+        flex-direction: column;
+    }
+}
+
+.passo {
+    @extend .caixa;
+    flex: 1;
+    text-align: center;
+
+    h3 {
+        color: $cor-primaria;
+    }
+}
+
+// Numera os passos 1, 2 e 3
+@for $i from 1 through 3 {
+    .passo:nth-child(#{$i})::before {
+        content: "#{$i}";
+        display: block;
+        font-size: 40px;
+        font-weight: bold;
+        color: $cor-secundaria;
+    }
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: $espacamento * 0.5;
+    max-width: 500px;
+    margin: $espacamento * 2 auto 0;
+
+    input,
+    textarea {
+        padding: 12px;
+        border: 1px solid $cor-primaria;
+        border-radius: $borda;
+        color: $cor-texto;
+        background-color: $cor-card;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}

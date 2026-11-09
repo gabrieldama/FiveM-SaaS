@@ -5,7 +5,7 @@ body {
   color: #e0f2fe;
 }
 
-.caixa, .noticia, .starter-box, .card {
+.caixa, .passo, .noticia, .starter-box, .card {
   padding: 20px;
   border-radius: 8px;
   background-color: #161d45;
@@ -249,6 +249,67 @@ body {
   color: #d946ef;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+.passos {
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 700px) {
+  .passos {
+    flex-direction: column;
+  }
+}
+
+.passo {
+  flex: 1;
+  text-align: center;
+}
+.passo h3 {
+  color: #22d3ee;
+}
+
+.passo:nth-child(1)::before {
+  content: "1";
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  color: #d946ef;
+}
+
+.passo:nth-child(2)::before {
+  content: "2";
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  color: #d946ef;
+}
+
+.passo:nth-child(3)::before {
+  content: "3";
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  color: #d946ef;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 40px auto 0;
+}
+.contato form input,
+.contato form textarea {
+  padding: 12px;
+  border: 1px solid #22d3ee;
+  border-radius: 8px;
+  color: #e0f2fe;
+  background-color: #161d45;
+}
+.contato form textarea {
+  height: 120px;
 }
 
 /*# sourceMappingURL=style.css.map */
