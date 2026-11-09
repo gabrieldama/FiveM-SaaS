@@ -312,4 +312,15 @@ body {
   height: 120px;
 }
 
+footer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #060918;
+  color: #e0f2fe;
+}
+footer .redes {
+  margin: 0 0 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
