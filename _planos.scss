@@ -1,0 +1,69 @@
+@use "base";
+@use "variaveis" as *;
+@use "mixins" as *;
+
+.starter-box {
+    @extend .caixa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid $cor-primaria;
+
+    h3 {
+        color: $cor-primaria;
+    }
+
+    @include celular {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.aviso {
+    font-size: 13px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    gap: $espacamento;
+
+    @include celular {
+        flex-direction: column;
+    }
+}
+
+.card {
+    @extend .caixa;
+    position: relative;
+    flex: 1;
+
+    h3 {
+        color: $cor-primaria;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    .selo {
+        position: absolute;
+        top: -12px;
+        right: $espacamento;
+        padding: 4px 10px;
+        border-radius: $borda;
+        font-size: 12px;
+        background-color: $cor-secundaria;
+    }
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+// Planos VIP: a borda fica mais grossa a cada plano
+@for $i from 1 through 3 {
+    .plano-#{$i} {
+        border: 1px * $i solid $cor-primaria;
+    }
+}
