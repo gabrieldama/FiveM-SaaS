@@ -1,0 +1,42 @@
+@use "base";
+@use "variaveis" as *;
+
+.noticias {
+    display: flex;
+    flex-direction: column;
+    gap: $espacamento;
+    margin-top: $espacamento * 2;
+}
+
+.noticia {
+    @extend .caixa;
+    display: flex;
+    align-items: center;
+    gap: $espacamento;
+
+    .versao {
+        padding: $espacamento;
+        border-radius: $borda;
+        font-weight: bold;
+        color: $cor-fundo;
+        background-color: $cor-primaria;
+    }
+
+    div {
+        flex: 1;
+    }
+
+    h3 {
+        margin: 0 0 5px;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        color: $cor-secundaria;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

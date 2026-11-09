@@ -5,7 +5,7 @@ body {
   color: #e0f2fe;
 }
 
-.caixa, .starter-box, .card {
+.caixa, .noticia, .starter-box, .card {
   padding: 20px;
   border-radius: 8px;
   background-color: #161d45;
@@ -215,6 +215,40 @@ body {
 
 .plano-3 {
   border: 3px solid #22d3ee;
+}
+
+.noticias {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.noticia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.noticia .versao {
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #0b1026;
+  background-color: #22d3ee;
+}
+.noticia div {
+  flex: 1;
+}
+.noticia h3 {
+  margin: 0 0 5px;
+}
+.noticia p {
+  margin: 0;
+}
+.noticia a {
+  color: #d946ef;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
