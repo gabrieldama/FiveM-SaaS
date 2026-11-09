@@ -1,4 +1,5 @@
 @use "variaveis" as *;
+@use "mixins" as *;
 
 body {
     margin: 0;
@@ -13,8 +14,38 @@ body {
     }
 }
 
-.container {
+.caixa {
+    padding: $espacamento;
+    border-radius: $borda;
+    background-color: $cor-card;
+}
+
+.secao {
     max-width: $largura-container;
     margin: 0 auto;
-    padding: $espacamento;
+    padding: $espacamento * 3 $espacamento;
+}
+
+.titulo-secao {
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: $cor-primaria;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: $espacamento * 2;
+}
+
+.preco {
+    display: block;
+    margin-bottom: $espacamento;
+    font-size: 20px;
+    font-weight: bold;
+    color: $cor-secundaria;
+}
+
+.botao-comprar {
+    @include botao(white, $cor-secundaria);
 }
